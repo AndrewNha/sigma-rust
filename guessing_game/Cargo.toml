@@ -8,3 +8,4 @@ name = "guessing_game"   # nome do executável
 path = "src/game.rs"     # caminho do arquivo principal
 
 [dependencies]
+rand = "0.8.5"
