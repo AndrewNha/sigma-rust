@@ -1,13 +1,13 @@
 use std::io;
-use std::cmp::Ordering; // serio que tem q usar biblioteca pra porra do if.
-use rand::Rng;
+use std::cmp::Ordering; // biblioteca para comparar valores
+use rand::Rng; // biblioteca para gerar numeros aleatorios
 
 fn main() {
     println!("Guess the number!");
 
     println!("Please input your guess, NOW:");
 
-    let secret_number = rand::thread_rng().gen_range(1..=100);
+    let secret_number = rand::thread_rng().gen_range(1..=100); // de 1 até 100, incluindo o 100
 
     println!("Secret number is: {secret_number}");
 
@@ -15,7 +15,7 @@ fn main() {
 
     io::stdin()
         .read_line(&mut guess)
-        .expect("Failed to read line");
+        .expect("Failed to read line"); // se der erro, printa a msg
 
     let guess: u32 = guess.trim().parse().expect("Please type a number!");
 
