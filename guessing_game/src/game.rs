@@ -17,7 +17,10 @@ fn main() {
         .read_line(&mut guess)
         .expect("Failed to read line"); // se der erro, printa a msg
 
-    let guess: u32 = guess.trim().parse().expect("Please type a number!");
+    let guess: u32 = guess
+    .trim() // remove espaços em branco
+    .parse() // converte string para numero (unsigned 32 bits)
+    .expect("Please type a number!"); // se der erro, printa a msg
 
     println!("You guessed: {guess}");
 
