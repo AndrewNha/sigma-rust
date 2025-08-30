@@ -2,6 +2,9 @@ target/
 
 .vscode/
 
+*.lock
+*.toml
+
 .DS_Store
 
 Thumbs.db
